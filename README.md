@@ -18,6 +18,14 @@ We've created some sections to keep the discussion focused.
 | [Q&A 🤝](https://github.com/reactwg/react-native-new-architecture/discussions/categories/q-a) | A place to ask the community for help on the New Architecture topics |
 | [Releases 🏁](https://github.com/reactwg/react-native-new-architecture/discussions/categories/releases) | A place to chat about release specific bugs & build problems |
 
+## Repos
+
+Some projects using the new architecture.
+
+| Repo name | Description | Android | iOS |
+| --- | --- | --- | --- |
+| [`TurboModule_VS_JsBridge`](https://github.com/bozaigao/TurboModule_VS_JsBridge) | This project mainly shows the performance differences before and after the new ARCHITECTURE of R N | ✅ | |
+
 ## How to join the working group
 
 This working group is **closed by default**.
