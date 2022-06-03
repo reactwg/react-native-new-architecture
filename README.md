@@ -24,7 +24,7 @@ Some projects using the new architecture.
 
 | Repo name | Description | Android | iOS |
 | --- | --- | --- | --- |
-| [`TurboModule_VS_JsBridge`](https://github.com/bozaigao/TurboModule_VS_JsBridge) | This project mainly shows the performance differences before and after the new ARCHITECTURE of R N | ✅ | |
+| [`TurboModule_VS_JsBridge`](https://github.com/bozaigao/TurboModule_VS_JsBridge) | This project mainly shows the performance differences before and after the new ARCHITECTURE of RN | ✅ | |
 
 ## How to join the working group
 
