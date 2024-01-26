@@ -1,27 +1,57 @@
 # React Native New Architecture Working Group
 
-This is a discussion-only repository to coordinate and support the rollout of the **React Native New Architecture**. 
-You can access to the working group via the [Discussions Tab on Github](https://github.com/reactwg/react-native-new-architecture/discussions).
+The intention of this repository is to coordinate and support the rollout of the **[React Native New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page)**. We have provided [guides](#guides) and a [discussion](#discussion) space for this purpose.
 
-The intention of this group is to offer a space where the community can meet and discuss about the New Architecture of React Native (being the Fabric Rendered and the TurboModule system). Moreover, we're going to use this working group to share information and updates with the wider community for the sake of transparency.
+You can find New Architecture updates [here](https://github.com/reactwg/react-native-new-architecture/discussions/categories/releases).
 
-## Sections
+## Guides
+
+- How to enable the New Architecture
+  - [For Apps](./docs/enable-apps.md)
+  - For Libraries
+    - [Prerequisites](./docs/enable-libraries-prerequisites.md)
+    - [For Android](./docs/enable-libraries-android.md)
+    - [For iOS](./docs/enable-libraries-ios.md)
+- New Architecture Workflows
+  - [Create a Fabric Native Component](./docs/fabric-native-components.md)
+  - [Create a Turbo Native Module](./docs/turbo-modules.md)
+  - [Using Codegen](./docs/codegen) to write type-safe Fabric Components and Turbo Modules
+  - Writing [cross-platform TurboModules](./docs/turbo-modules-xplat.md) with C++
+    - Supporting [custom C++ types](./docs/cxx-custom-types.md)
+  - [Using React 18](./docs/react-18.md) features
+  - [Backwards compatibility](./docs/backwards-compat.md)
+    - For [Legacy Native Modules](./docs/backwards-compat-turbo-modules.md)
+    - For [Legacy Native Components](./docs/backwards-compat-fabric-component.md)
+- [Troubleshooting](./docs/troubleshooting.md)
+- [Appendix](./docs/appendix.md)
+
+## Discussion
+
+This repository is also a place for discussion and feedback on the New Architecture. You can access it by heading over to the [Discussions Tab on Github](https://github.com/reactwg/react-native-new-architecture/discussions).
+
+Note: The discussion is **closed by default** and only members of the working group can post.
+
+Everyone is welcome to join the working group.
+If you wish to join the conversation, [please fill in the following form](https://forms.gle/8emgdwFZXuzEpyyn9).
+We will review your application and will give you access soon after.
+
+### Sections
 
 We've created some sections to keep the discussion focused.
 
-| Title | Topic |
-| --- | --- |
-| [Announcements 📣](https://github.com/reactwg/react-native-new-architecture/discussions/categories/announcements) | A place to share milestones and significant updates on the RN New Architecture Rollout |
-| [Deep Dive 🐳](https://github.com/reactwg/react-native-new-architecture/discussions/categories/deep-dive) | A place to chat about deep dives and technical-specific topics |
-| [Documentation 📚](https://github.com/reactwg/react-native-new-architecture/discussions/categories/documentation) | A place to chat about the New Architecture documentation and migration material |
-| [Libraries 🛠](https://github.com/reactwg/react-native-new-architecture/discussions/categories/libraries) | A place to chat about 3rd party libraries and their migration story to the New Architecture |
-| [Q&A 🤝](https://github.com/reactwg/react-native-new-architecture/discussions/categories/q-a) | A place to ask the community for help on the New Architecture topics |
-| [Releases 🏁](https://github.com/reactwg/react-native-new-architecture/discussions/categories/releases) | A place to chat about release specific bugs & build problems |
+| Title                                                                                                             | Topic                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| [Announcements 📣](https://github.com/reactwg/react-native-new-architecture/discussions/categories/announcements) | General announcements about this working group.                                             |
+| [Deep Dive 🐳](https://github.com/reactwg/react-native-new-architecture/discussions/categories/deep-dive)         | Sharing deep dives and technical-specific topics                                            |
+| [Documentation 📚](https://github.com/reactwg/react-native-new-architecture/discussions/categories/documentation) | A place to chat about the New Architecture documentation and migration material             |
+| [Libraries 🛠](https://github.com/reactwg/react-native-new-architecture/discussions/categories/libraries)          | A place to chat about 3rd party libraries and their migration story to the New Architecture |
+| [Q&A 🤝](https://github.com/reactwg/react-native-new-architecture/discussions/categories/q-a)                     | A place to ask the community for help on the New Architecture topics                        |
+| [Releases 🏁](https://github.com/reactwg/react-native-new-architecture/discussions/categories/releases)           | Updates on New Architecture in each release                                                 |
 
 ## How to join the working group
 
 This working group is **closed by default**.
 
-Everyone is welcome to join the conversation though. 
+Everyone is welcome to join the conversation though.
 [If you wish to join the conversation, please fill in the following form.](https://forms.gle/8emgdwFZXuzEpyyn9)
 We will review your application and will give you access just after.
