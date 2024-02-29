@@ -6,11 +6,14 @@ This page will help you create or migrate a React Native app that uses the New A
 > If you're using Expo or plan to use Expo, you can't enable the New Architecture at the moment and will have to wait for a future release of the Expo SDK.
 
 ### Prerequisites
+
 1. Use or upgrade to the latest React Native version. This guide is written with the expectation that you’re using the [**latest** React Native release](https://github.com/facebook/react-native/releases/latest).
 2. If you previously installed a global `react-native-cli` package, please remove it as it may cause unexpected issues:
+
 ```shell
   npm uninstall -g react-native-cli @react-native-community/cli
 ```
+
 3. Enable Hermes. If you are using React Native 0.70 or above, it is already the [default JS engine](https://reactnative.dev/blog/2022/07/08/hermes-as-the-default) so no action is needed.
 
 ### Create a React Native app
@@ -22,12 +25,13 @@ If following the setup guide, stop when you reach the section **Running your Rea
 Then, create a new React Native project from the template:
 
 ```shell
-npx react-native@latest init AwesomeProject
+npx react-native@latest init AwesomeProject --skip-install
 ```
 
 ### Enable New Architecture for iOS
 
 #### For new apps created from React Native CLI
+
 Navigate to the `ios` directory and run the following:
 
 ```shell
@@ -36,12 +40,15 @@ bundle install && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
 
 Then build and run the app as usual:
+
 ```shell
 yarn ios
 ```
 
-#### For existing apps 
+#### For existing apps
+
 You'll need to reinstall your pods by running `pod install` with the right flag:
+
 ```shell
 # Run pod install with the flag:
 RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
@@ -58,6 +65,7 @@ You will need to run `pod install` each time a dependency with native code chang
     "pod-install": "RCT_NEW_ARCH_ENABLED=1 bundle exec pod install"
   }
 ```
+
 and run it with `yarn pod-install`. Note that `bundle install` does not need to run a second time, as long as the Gemfile has not changed.
 
 ##### Use Xcode to rename files in the `ios` folder
@@ -79,6 +87,7 @@ If you see a build failure from `react-native run-ios`, there may be cached file
 > You may notice longer build times with the New Architecture due to additional step of C++ compilation with the Android NDK. To improve your build time, see [Speeding Up Your Build Phase](https://reactnative.dev/docs/build-speed).
 
 #### For new apps created from React Native CLI
+
 Set the `newArchEnabled` property to `true` by **either**:
 
 - Changing the corresponding line in `android/gradle.properties`
@@ -91,6 +100,7 @@ yarn android
 ```
 
 #### For existing apps
+
 You will only need to update your `android/gradle.properties` file as follows:
 
 ```diff

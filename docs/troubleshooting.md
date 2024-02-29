@@ -21,16 +21,6 @@ The CocoaPods integration will see frequent updates as we rollout the New Archit
 3. Delete `node_modules` and re-run `yarn install`.
 4. Delete your codegen artifacts and re-run `pod install` (or `arch -x86_64 pod install`, in case of a Mac M1), then clean and build your Xcode project.
 
-## Folly Version
-
-As it happens, the Folly version used in your podspec must match whatever version is used in React Native at this time. If you see the following error after running `pod install`:
-
-```
-[!] CocoaPods could not find compatible versions for pod "RCT-Folly":
-```
-
-...you may have a version-mismatch. Take a look at your `node_modules/react-native/React/FBReactNativeSpec/FBReactNativeSpec.podspec` file and make note of the `folly_version` used there. Go back to your own podspec and set your `folly_version` to match.
-
 ## Android build is failing with `OutOfMemoryException`
 
 If your Android Gradle builds are failing with: `OutOfMemoryException: Out of memory: Java heap space.` or similar errors related to low memory, you might need to increase the memory allocated to the JVM.

@@ -169,8 +169,6 @@ Callback functions are not type checked, and are generalized as `Object`s.
 
 ## IV. Invoking the code-gen during development
 
-> This section contains information specific to v0.66 of React Native.
-
 The Codegen is typically invoked at build time, but you may find it useful to generate your native interface code on demand for troubleshooting.
 
 If you wish to invoke the Codegen manually, you have three options:
@@ -261,10 +259,6 @@ In the above example, the code-gen script will generate several files: `MyLibSpe
 ## V. Note on Existing Apps
 
 This guide provides instructions for migrating an application that is based on the default app template that is provided by React Native. If your app has deviated from the template, or you are working with an application that was never based off the template, then the following sections might help.
-
-### Finding your bridge delegate
-
-This guide assumes that the `AppDelegate` is configured as the bridge delegate. If you are not sure which is your bridge delegate, then place a breakpoint in `RCTBridge` and `RCTCxxBridge`, run your app, and inspect `self.delegate`.
 
 ---
 
