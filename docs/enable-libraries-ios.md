@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Enable the New Architecture for Libraries: iOS
 
 You have defined the JavaScript specs for your native modules as part of the [prerequisites](./enable-libraries-prerequisites.md), and you are now ready to migrate your library to the New Architecture. Here are the steps you can follow to accomplish this.

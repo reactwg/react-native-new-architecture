@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Troubleshooting
 
 This page contains resolutions to common problem you might face when migrating to the New Architecture.

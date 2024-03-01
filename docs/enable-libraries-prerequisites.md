@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Enable the New Architecture for Libraries: Prerequisites
 
 The following steps are prerequisites to ensure your modules and components are ready for the New Architecture.

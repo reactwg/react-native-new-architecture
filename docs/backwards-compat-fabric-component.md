@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Fabric Components as Legacy Native Components
 
 > [!Note]

@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Appendix
 
 ## I. Terminology

@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Fabric Native Components
 
 A Fabric Native Component is a Native Component rendered on the screen using the [Fabric Renderer](https://reactnative.dev/architecture/fabric-renderer). Using Fabric Native Components instead of Legacy Native Components allows us to reap all the of the **New Architecture**:

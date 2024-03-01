@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Enable the New Architecture for Libraries: Android
 
 Once you have defined the JavaScript specs for your native modules as part of the [prerequisites](./enable-libraries-prerequisites.md), set up the configuration of the Codegen, and follow the Android/Gradle setup, you are now ready to migrate your library to the new architecture. Here are the steps you can follow to accomplish this.

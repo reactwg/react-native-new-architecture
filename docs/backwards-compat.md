@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Backwards Compatibility
 
 Creating a backward compatible module is important to provide a library that works in both the **Old Architecture** and the **New Architecture**. Not all the users of your library will immediately jump on the New Architecture ship: it is a good thing that they will be able to use your library even if they are still using the old architecture.

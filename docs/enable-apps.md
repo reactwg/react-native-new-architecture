@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Enable the New Architecture for Apps
 
 This page will help you create or migrate a React Native app that uses the New Architecture.

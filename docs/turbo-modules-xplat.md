@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Cross-Platform Turbo Native Modules with C++
 
 This guide shows you how to implement a Turbo Native Module using C++ only, a way to share the same implementation with any supported platform (Android, iOS, macOS or Windows).

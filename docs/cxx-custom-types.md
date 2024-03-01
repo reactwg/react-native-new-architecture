@@ -1,3 +1,5 @@
+[../README.md#Guides](../README.md#guides)
+
 # Supporting Custom C++ Types
 
 By default C++ Turbo Native Modules support [bridging functionality](https://github.com/facebook/react-native/tree/main/packages/react-native/ReactCommon/react/bridging) for most `std::` standard types.
