@@ -26,6 +26,8 @@ Then, create a new React Native project from the template:
 
 ```shell
 npx react-native@latest init AwesomeProject --skip-install
+cd AwesomeProject
+yarn install
 ```
 
 ### Enable New Architecture for iOS
