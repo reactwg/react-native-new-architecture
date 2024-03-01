@@ -15,7 +15,7 @@ You can find New Architecture updates [here](https://github.com/reactwg/react-na
 - New Architecture Workflows
   - [Create a Fabric Native Component](./docs/fabric-native-components.md)
   - [Create a Turbo Native Module](./docs/turbo-modules.md)
-  - [Using Codegen](./docs/codegen) to write type-safe Fabric Components and Turbo Modules
+  - [Using Codegen](./docs/codegen.md) to write type-safe Fabric Components and Turbo Modules
   - Writing [cross-platform TurboModules](./docs/turbo-modules-xplat.md) with C++
     - Supporting [custom C++ types](./docs/cxx-custom-types.md)
   - [Using React 18](./docs/react-18.md) features
