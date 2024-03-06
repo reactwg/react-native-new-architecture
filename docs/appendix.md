@@ -16,13 +16,15 @@ The whole New Architecture related guides will stick to the following **terminol
 You may use the following table as a reference for which types are supported and what they map to in each platform:
 
 ### `string`
-
+|   |   |
+|---|---|
 | Nullable Support? | `?string` |
 | Android (Java) | `string` |
 | iOS | `NSString` |
 
 ### `boolean`
-
+|   |   |
+|---|---|
 | Nullable Support? | `?boolean` |
 | Android (Java) | `Boolean` |
 | iOS | `NSNumber` |
@@ -32,8 +34,9 @@ You may use the following table as a reference for which types are supported and
 This is recommended over using plain `Object`, for type safety.
 
 **Example:** `{| foo: string, ... |}`
-
-| Nullable Support? | `?{| foo: string, ...|}` |
+|   |   |
+|---|---|
+| Nullable Support? | <code>?{&#124; foo: string, ...&#124;}</code> |
 | Android (Java) | - |
 | iOS | - |
 
@@ -41,25 +44,29 @@ This is recommended over using plain `Object`, for type safety.
 
 > [!NOTE]
 > Recommended to use [Object literal](#object-literal) instead.
-
+|   |   |
+|---|---|
 | Nullable Support? | `?Object` |
 | Android (Java) | `ReadableMap` |
 | iOS | `@` (untyped dictionary) |
 
 ### `Array<*>`
-
+|   |   |
+|---|---|
 | Nullable Support? | `?Array<*>` |
 | Android (Java) | `ReadableArray` |
 | iOS | `NSArray` (or `RCTConvertVecToArray` when used inside objects) |
 
 ### `Function`
-
+|   |   |
+|---|---|
 | Nullable Support? | `?Function` |
-| Android (Java) | '-' |
-| iOS | '-' |
+| Android (Java) | - |
+| iOS | - |
 
 ### `Promise<*>`
-
+|   |   |
+|---|---|
 | Nullable Support? | `?Promise<*>` |
 | Android (Java) | `com.facebook.react.bridge.Promise` |
 | iOS | `RCTPromiseResolve` and `RCTPromiseRejectBlock` |
@@ -69,18 +76,20 @@ This is recommended over using plain `Object`, for type safety.
 Type unions are only supported as callbacks.
 
 **Example:** `'SUCCESS' | 'FAIL'`
-
-| Nullable Support? | 'Only as callbacks' |
-| Android (Java) | '-' |
-| iOS | '-' |
+|   |   |
+|---|---|
+| Nullable Support? | Only as callbacks |
+| Android (Java) | - |
+| iOS | - |
 
 ### Callbacks
 
 Callback functions are not type checked, and are generalized as `Object`s.
 
 **Example:** `() =>`
-
-| Nullable Support? | 'Yes' |
+|   |   |
+|---|---|
+| Nullable Support? | Yes |
 | Android (Java) | `com.facebook.react.bridge.Callback` |
 | iOS | `RCTResponseSenderBlock` |
 
@@ -92,20 +101,23 @@ Callback functions are not type checked, and are generalized as `Object`s.
 You may use the following table as a reference for which types are supported and what they map to in each platform:
 
 ### `string`
-
-| Nullable Support? | `string | null` |
+|   |   |
+|---|---|
+| Nullable Support? | <code>string &#124; null</code> |
 | Android (Java) | `String` |
 | iOS | `NSString` |
 
 ### `boolean`
-
-| Nullable Support? | `boolean | null` |
+|   |   |
+|---|---|
+| Nullable Support? | <code>boolean &#124; null</code> |
 | Android (Java) | `Boolean` |
 | iOS | `NSNumber` |
 
 ### `number`
-
-| Nullable Support? | 'No' |
+|   |   |
+|---|---|
+| Nullable Support? | No |
 | Android (Java) | `double` |
 | iOS | `NSNumber` |
 
@@ -114,8 +126,9 @@ You may use the following table as a reference for which types are supported and
 This is recommended over using plain `Object`, for type safety.
 
 **Example:** `{| foo: string, ... |}`
-
-| Nullable Support? | `{| foo: string, ...|} | null` |
+|   |   |
+|---|---|
+| Nullable Support? | <code>?{&#124; foo: string, ...&#124;} &#124; null</code> |
 | Android (Java) | - |
 | iOS | - |
 
@@ -124,25 +137,30 @@ This is recommended over using plain `Object`, for type safety.
 > [!NOTE]
 > Recommended to use [Object literal](#object-literal-1) instead.
 
-| Nullable Support? | `Object | null` |
+|   |   |
+|---|---|
+| Nullable Support? | <code>Object &#124; null</code> |
 | Android (Java) | `ReadableMap` |
 | iOS | `@` (untyped dictionary) |
 
 ### `Array<*>`
-
-| Nullable Support? | `Array<*> | null` |
+|   |   |
+|---|---|
+| Nullable Support? | <code>Array<*> &#124; null</code> |
 | Android (Java) | `ReadableArray` |
 | iOS | `NSArray` (or `RCTConvertVecToArray` when used inside objects) |
 
 ### `Function`
-
-| Nullable Support? | `Function | null` |
-| Android (Java) | '-' |
-| iOS | '-' |
+|   |   |
+|---|---|
+| Nullable Support? | <code>Function &#124; null</code> |
+| Android (Java) | - |
+| iOS | - |
 
 ### `Promise<*>`
-
-| Nullable Support? | `Promise<*> | null` |
+|   |   |
+|---|---|
+| Nullable Support? | <code>Promise<*> &#124; null</code> |
 | Android (Java) | `com.facebook.react.bridge.Promise` |
 | iOS | `RCTPromiseResolve` and `RCTPromiseRejectBlock` |
 
@@ -151,18 +169,20 @@ This is recommended over using plain `Object`, for type safety.
 Type unions are only supported as callbacks.
 
 **Example:** `'SUCCESS' | 'FAIL'`
-
-| Nullable Support? | 'Only as callbacks' |
-| Android (Java) | '-' |
-| iOS | '-' |
+|   |   |
+|---|---|
+| Nullable Support? | Only as callbacks |
+| Android (Java) | - |
+| iOS | - |
 
 ### Callbacks
 
 Callback functions are not type checked, and are generalized as `Object`s.
 
 **Example:** `() =>`
-
-| Nullable Support? | 'Yes' |
+|   |   |
+|---|---|
+| Nullable Support? | Yes |
 | Android (Java) | `com.facebook.react.bridge.Callback` |
 | iOS | `RCTResponseSenderBlock` |
 
