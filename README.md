@@ -29,11 +29,6 @@ You can find New Architecture updates [here](https://github.com/reactwg/react-na
 
 This repository is also a place for discussion and feedback on the New Architecture. You can access it by heading over to the [Discussions Tab on Github](https://github.com/reactwg/react-native-new-architecture/discussions).
 
-Note: The discussion is **closed by default** and only members of the working group can post.
-
-Everyone is welcome to join the working group.
-If you wish to join the conversation, [please fill in the following form](https://forms.gle/8emgdwFZXuzEpyyn9).
-We will review your application and will give you access soon after.
 
 ### Sections
 
