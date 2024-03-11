@@ -47,11 +47,3 @@ We've created some sections to keep the discussion focused.
 | [Libraries 🛠](https://github.com/reactwg/react-native-new-architecture/discussions/categories/libraries)          | A place to chat about 3rd party libraries and their migration story to the New Architecture |
 | [Q&A 🤝](https://github.com/reactwg/react-native-new-architecture/discussions/categories/q-a)                     | A place to ask the community for help on the New Architecture topics                        |
 | [Releases 🏁](https://github.com/reactwg/react-native-new-architecture/discussions/categories/releases)           | Updates on New Architecture in each release                                                 |
-
-## How to join the working group
-
-This working group is **closed by default**.
-
-Everyone is welcome to join the conversation though.
-[If you wish to join the conversation, please fill in the following form.](https://forms.gle/8emgdwFZXuzEpyyn9)
-We will review your application and will give you access just after.
