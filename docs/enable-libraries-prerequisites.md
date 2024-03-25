@@ -2,7 +2,10 @@
 
 # Enable the New Architecture for Libraries: Prerequisites
 
-The following steps are prerequisites to ensure your modules and components are ready for the New Architecture.
+> [!IMPORTANT]
+> Before proceeding to convert your library to natively use TurboModules/Fabric, you should [ensure that it is compatible with the interop layer](enable-libraries.md). This is the quickest way to make your library compatible today.
+
+This guide explains how to convert your library to use the TurboModules API and Fabric Component API natively, without the interop layer. The following steps are prerequisites to ensure your modules and components are ready for the New Architecture.
 
 1. [Define Specs in JavaScript](#define-specs-in-javascript)
 2. [Configure Codegen](#configure-codegen)
