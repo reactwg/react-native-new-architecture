@@ -273,7 +273,7 @@ If you are working on a library, you can include Codegen artefacts in it. This s
 
 Here is how you can enable this setup:
 
-- Define `includesGeneratedCode: true` and `outputDir` in the `codegenConfig`, as described in [Configure Codegen](./enable-libraries.md#configure-codegen).
+- Define `includesGeneratedCode: true` and `outputDir` in the `codegenConfig`, as described in [Configure Codegen](./enable-libraries-prerequisites.md#configure-codegen).
 - Run Codegen locally with [the codegen CLI](./codegen.md#the-codegen-cli).
 - Update your `package.json` to include the generated code.
 - Update your [podspec](./turbo-modules.md#ios-create-the-podspec-file) to include the generated code.
