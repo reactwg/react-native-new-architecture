@@ -7,11 +7,13 @@ You can find New Architecture updates [here](https://github.com/reactwg/react-na
 ## Guides
 
 - How to enable the New Architecture
-  - [For Apps](./docs/enable-apps.md)
+  - For Apps
+    - [Enable the New Architecture for Apps](./docs/enable-apps.md)
   - For Libraries
-    - [Prerequisites](./docs/enable-libraries-prerequisites.md)
-    - [For Android](./docs/enable-libraries-android.md)
-    - [For iOS](./docs/enable-libraries-ios.md)
+    - [Make your library compatible with the New Architecture](./docs/enable-libraries.md)
+    - [Convert Library to TurboModules/Fabric APIs](./docs/enable-libraries-prerequisites.md)
+      - [Additional information for Android](./docs/enable-libraries-android.md)
+      - [Additional information for iOS](./docs/enable-libraries-ios.md)
 - New Architecture Workflows
   - [Create a Fabric Native Component](./docs/fabric-native-components.md)
   - [Create a Turbo Native Module](./docs/turbo-modules.md)
