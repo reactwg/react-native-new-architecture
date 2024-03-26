@@ -4,7 +4,7 @@
 
 **The first step for supporting the New Architecture in your library is to ensure that it is compatible with the [Interop Layer](https://github.com/reactwg/react-native-new-architecture/discussions/135)**. The Interop Layer makes it possible to use existing native modules written for the legacy architecture with the New Architecture.
 
-If your library is already fully converted to the TurboModules/Fabric APIs, then you can skip this guide. Otherwise, then **you should do ensure compatibiltiy with the Interop Layer before proceeding to convert your library to natively use TurboModules/Fabric.**
+If your library is already fully converted to the TurboModules/Fabric APIs, then you can skip this guide. Otherwise, then **you should ensure compatibiltiy with the Interop Layer before proceeding to convert your library to natively use TurboModules/Fabric.**
 
 Starting with React Native 0.74, the Interop Layer is enabled by default. If your library works with it, then no changes will be needed on the user's side in order to use your library.
 
@@ -14,6 +14,9 @@ Starting with React Native 0.74, the Interop Layer is enabled by default. If you
 ## Ensuring compatibility with the Interop Layer
 
 The Interop Layer will generally work out of the box with simple libraries, but the more complex your library is, the more likely it is that you will need to make some changes. The following sections will guide you through the process of verifying that your library works with the Interop Layer and fixing common issues that developers have encountered.
+
+> [!NOTE]
+> It is not necessary to test your library against the New Architecture with bridgeless _disabled_. It is expected that from React Native 0.74, developers should be using the New Architecture with bridgeless _enabled_.
 
 ## 1. Test your library with the New Architecture and the Interop Layer
 
