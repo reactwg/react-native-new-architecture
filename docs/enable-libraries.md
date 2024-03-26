@@ -16,7 +16,7 @@ Starting with React Native 0.74, the Interop Layer is enabled by default. If you
 The Interop Layer will generally work out of the box with simple libraries, but the more complex your library is, the more likely it is that you will need to make some changes. The following sections will guide you through the process of verifying that your library works with the Interop Layer and fixing common issues that developers have encountered.
 
 > [!NOTE]
-> It is not necessary to test your library against the New Architecture with bridgeless _disabled_. It is expected that from React Native 0.74, developers should be using the New Architecture with bridgeless _enabled_.
+> It is not necessary to test your library against the New Architecture with bridgeless _disabled_  — it is expected that from React Native 0.74, developers using the New Architecture will have bridgeless _enabled_.
 
 ## 1. Test your library with the New Architecture and the Interop Layer
 
