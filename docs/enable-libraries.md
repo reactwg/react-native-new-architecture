@@ -17,7 +17,8 @@ Follow [the guide for testing your library against the latest version of React N
 
 ### Common issues (JavaScript)
 
-(list them here, along with solutions and links to pull requests)
+
+- `XYZ  is not a function (it is undefined)`. When accessing a module directly from `NativeModules` in the new architecture some operators won't work due to the fact of turbomodule using object prototypes now to lazily load methods. This includes things like the spread operator and `Object.keys`. You can find more details in https://github.com/facebook/react-native/issues/43221
 
 ### Common issues (iOS)
 
