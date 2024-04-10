@@ -461,7 +461,6 @@ This file defines the interface for the `RTNCalculator` module. Here, we can add
 ##### RTNCalculator.mm
 
 ```objc title="RTNCalculator.mm"
-#import "RTNCalculatorSpec.h"
 #import "RTNCalculator.h"
 
 @implementation RTNCalculator
