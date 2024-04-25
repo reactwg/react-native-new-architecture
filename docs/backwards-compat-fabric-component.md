@@ -208,7 +208,7 @@ After wrapping the above components with a `#ifdef` pragma, you need to implemen
 >
 > If you configure your library to [include codegen artifacts](https://github.com/reactwg/react-native-new-architecture/blob/main/docs/codegen.md#including-generated-code-into-libraries), you'll get Android backwards compatibility FOR FREE. This is currently the recommended approach.
 >
-> The following instructions are only for libraries that chose to ryly on the app-level codegen.
+> The following instructions are only for libraries that chose to rely on the app-level codegen.
 
 ### Project Dependencies
 
