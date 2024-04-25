@@ -22,9 +22,8 @@ Creating a backward compatible Fabric Native Component lets your users continue 
 
 While the last step is the same for all the platforms, the first two steps are different for iOS and Android.
 
-## Configure the Fabric Native Component Dependencies
-
-### iOS {#dependencies-ios}
+## iOS
+### Project Dependencies
 
 The Apple platform installs Fabric Native Components using [CocoaPods](https://cocoapods.org) as a dependency manager.
 
@@ -115,48 +114,7 @@ Pod::Spec.new do |s|
 end
 ```
 
-### Android
-
-To create a Native Component that can work with both architectures, you need to configure Gradle to choose which files need to be compiled depending on the chosen architecture. This can be achieved by using **different source sets** in the Gradle configuration.
-
-> [!note]
-> Please note that this is currently the suggested approach. While it might lead to some code duplication, it will ensure maximum compatibility with both architectures. You will see how to reduce the duplication in the next section.
-
-To configure the Fabric Native Component so that it picks the proper sourceset, you have to update the `build.gradle` file in the following way:
-
-```diff title="build.gradle"
-+// Add this function in case you don't have it already
-+ def isNewArchitectureEnabled() {
-+    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
-+}
-// ... other parts of the build file
-defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion', 21)
-        targetSdkVersion safeExtGet('targetSdkVersion', 31)
-+        buildConfigField("boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString())
-+    }
-+
-+    sourceSets {
-+        main {
-+            if (isNewArchitectureEnabled()) {
-+                java.srcDirs += ['src/newarch']
-+            } else {
-+                java.srcDirs += ['src/oldarch']
-+            }
-+        }
-    }
-}
-```
-
-These changes do three main things:
-
-1. The first lines define a function that returns whether the New Architecture is enabled or not.
-2. The `buildConfigField` line defines a build configuration boolean field called `IS_NEW_ARCHITECTURE_ENABLED`, and initialize it using the function declared in the first step. This allows you to check at runtime if a user has specified the `newArchEnabled` property or not.
-3. The last lines leverage the function declared in step one to decide which source sets we need to build, depending on the chosen architecture.
-
-## Update the codebase
-
-### iOS
+### Update the codebase
 
 The second step is to instruct Xcode to avoid compiling all the lines using the New Architecture types and files when we are building an app with the Old Architecture.
 
@@ -244,7 +202,51 @@ The above snippet uses the same `RCT_NEW_ARCH_ENABLED` flag used in the previous
 
 After wrapping the above components with a `#ifdef` pragma, you need to implement the component for the legacy architecture, following [the legacy Native Component documentation](https://reactnative.dev/docs/native-components-ios). This is needed because the New Renderer works in a different way from the legacy one, and it is not able to follow the new code's paths of the New Renderer.
 
-### Android
+## Android
+
+> [!Note]
+>
+> If you configure your library to [include codegen artifacts](https://github.com/reactwg/react-native-new-architecture/blob/main/docs/codegen.md#including-generated-code-into-libraries), you'll get Android backwards compatibility FOR FREE. This is currently the recommended approach.
+>
+> The following instructions are only for libraries that chose to ryly on the app-level codegen.
+
+### Project Dependencies
+
+To create a Native Component that can work with both architectures, you need to configure Gradle to choose which files need to be compiled depending on the chosen architecture. This can be achieved by using **different source sets** in the Gradle configuration.
+
+To configure the Fabric Native Component so that it picks the proper sourceset, you have to update the `build.gradle` file in the following way:
+
+```diff title="build.gradle"
++// Add this function in case you don't have it already
++ def isNewArchitectureEnabled() {
++    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
++}
+// ... other parts of the build file
+defaultConfig {
+        minSdkVersion safeExtGet('minSdkVersion', 21)
+        targetSdkVersion safeExtGet('targetSdkVersion', 31)
++        buildConfigField("boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString())
++    }
++
++    sourceSets {
++        main {
++            if (isNewArchitectureEnabled()) {
++                java.srcDirs += ['src/newarch']
++            } else {
++                java.srcDirs += ['src/oldarch']
++            }
++        }
+    }
+}
+```
+
+These changes do three main things:
+
+1. The first lines define a function that returns whether the New Architecture is enabled or not.
+2. The `buildConfigField` line defines a build configuration boolean field called `IS_NEW_ARCHITECTURE_ENABLED`, and initialize it using the function declared in the first step. This allows you to check at runtime if a user has specified the `newArchEnabled` property or not.
+3. The last lines leverage the function declared in step one to decide which source sets we need to build, depending on the chosen architecture.
+
+### Update the codebase
 
 As we can't use conditional compilation blocks on Android, we will define two different source sets. This will allow to create a backward compatible TurboModule with the proper source that is loaded and compiled depending on the used architecture.
 
