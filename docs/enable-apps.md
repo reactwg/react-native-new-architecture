@@ -66,7 +66,7 @@ You will need to run `pod install` each time a dependency with native code chang
 
 ```
   "scripts": {
-    "pod-install": "RCT_NEW_ARCH_ENABLED=1 bundle exec pod install"
+    "pod-install": "cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install"
   }
 ```
 
