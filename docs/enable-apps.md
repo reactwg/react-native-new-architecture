@@ -5,7 +5,7 @@
 This page will help you create or migrate a React Native app that uses the New Architecture.
 
 > [!WARNING]
-> If you're using Expo or plan to use Expo, you can't enable the New Architecture at the moment and will have to wait for a future release of the Expo SDK.
+> If you're using Expo, refer to [docs.expo.dev/guides/new-architecture](https://docs.expo.dev/guides/new-architecture/).
 
 ### Prerequisites
 
