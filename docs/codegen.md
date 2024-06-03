@@ -230,7 +230,7 @@ The **Codegen** also creates a `ComponentDescriptor.h`, which is required to get
 #### DESCRIPTION
 
 This command runs `react-native-codegen` for your project.
-The Codegen must be configured as described in [Configure Codegen](./enable-libraries.md#configure-codegen).
+The Codegen must be configured as described in [Configure Codegen](./enable-libraries-prerequisites.md#configure-codegen).
 
 The following options are available:
 
