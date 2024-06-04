@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 end
 ```
 
-At this [link](https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L192-L197), you can find the documentation of the `install_modules_dependencies` function.
+At this [link](https://github.com/facebook/react-native/blob/v0.74.0/packages/react-native/scripts/react_native_pods.rb#L234-L239), you can find the documentation of the `install_modules_dependencies` function.
 
 If you need to explicitly know which `folly_flags` React Native is using, you can query them using the [`folly_flag`](https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L188) function.
 

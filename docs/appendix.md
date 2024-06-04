@@ -44,6 +44,7 @@ This is recommended over using plain `Object`, for type safety.
 
 > [!NOTE]
 > Recommended to use [Object literal](#object-literal) instead.
+
 |   |   |
 |---|---|
 | Nullable Support? | `?Object` |

@@ -124,7 +124,7 @@ In general, this means you can use primitive types (strings, numbers, booleans),
 
 > [!NOTE]
 > See Appendix [II. Flow Type to Native Type Mapping](./appendix.md#ii-flow-type-to-native-type-mapping).
-> See Appendix [III. TypeScript to Native Type Mapping](./appendix#iii-typescript-to-native-type-mapping).
+> See Appendix [III. TypeScript to Native Type Mapping](./appendix.md#iii-typescript-to-native-type-mapping).
 
 ### Codegen Helper Types
 
