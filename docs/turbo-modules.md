@@ -92,6 +92,8 @@ export default TurboModuleRegistry.get<Spec>("RTNCalculator") as Spec | null;
 
 </details>
 
+Place the file in the `js` directory that we have just created, eg: `js/NativeRTNCalculator.ts`.
+
 At the beginning of the spec files are the imports:
 
 - The `TurboModule` type, which defines the base interface for all Turbo Native Modules
@@ -385,6 +387,7 @@ cd MyApp
 yarn add ../RTNCalculator
 cd ..
 node MyApp/node_modules/react-native/scripts/generate-codegen-artifacts.js \
+  --targetPlatform ios \
   --path MyApp/ \
   --outputPath RTNCalculator/generated/
 ```
@@ -449,7 +452,7 @@ Now add the Native code for your Turbo Native Module. Create two files in the `R
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RTNCalculator : NSObject <NativeCalculatorSpec>
+@interface RTNCalculator : NSObject <NativeRTNCalculatorSpec>
 
 @end
 
@@ -475,7 +478,7 @@ RCT_EXPORT_MODULE()
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
-    return std::make_shared<facebook::react::NativeCalculatorSpecJSI>(params);
+    return std::make_shared<facebook::react::NativeRTNCalculatorSpecJSI>(params);
 }
 
 @end
@@ -848,7 +851,7 @@ export default App;
 import React from "react";
 import { useState } from "react";
 import { SafeAreaView, StatusBar, Text, Button } from "react-native";
-import RTNCalculator from "rtn-calculator/js/NativeCalculator";
+import RTNCalculator from "rtn-calculator/js/NativeRTNCalculator";
 
 const App: () => JSX.Element = () => {
   const [result, setResult] = useState<number | null>(null);
