@@ -503,7 +503,7 @@ Then, you have to expose the `text` property for the Fabric Native Component. Th
 
 > [!Note]
 > Unlike legacy native components, properties are actually handled via `updateProps` C++ code, see below.
-> Those macros are needed for the bridge, With bidgeless mode you can omit them.
+> Those macros are needed for bridge compatibility. With bidgeless mode you can omit them entirely.
 > There are other macros that can be used to export custom properties, emitters, and other constructs. You can view the code that specifies them [here](https://github.com/facebook/react-native/blob/main/packages/react-native/React/Views/RCTViewManager.h).
 
 ##### RTNCenteredText.h
