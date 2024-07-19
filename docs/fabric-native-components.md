@@ -2,7 +2,7 @@
 
 # Fabric Native Components
 
-A Fabric Native Component is a Native Component rendered on the screen using the [Fabric Renderer](https://reactnative.dev/architecture/fabric-renderer). Using Fabric Native Components instead of Legacy Native Components allows us to reap all the of the **New Architecture**:
+A Fabric Native Component is a Native Component rendered on the screen using the [Fabric Renderer](https://reactnative.dev/architecture/fabric-renderer). Using Fabric Native Components instead of Legacy Native Components allows us to reap all the benefits of the **New Architecture**:
 
 - Strongly typed interfaces that are consistent across platforms.
 - The ability to write your code in C++, either exclusively or integrated with another native platform language, hence reducing the need to duplicate implementations across platforms.
