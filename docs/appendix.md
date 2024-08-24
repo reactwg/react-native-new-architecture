@@ -37,7 +37,7 @@ This is recommended over using plain `Object`, for type safety.
 |   |   |
 |---|---|
 | Nullable Support? | <code>?{&#124; foo: string, ...&#124;}</code> |
-| Android (Java) | - |
+| Android (Java) | `ReadableMap` |
 | iOS | - |
 
 ### `Object`
