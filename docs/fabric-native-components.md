@@ -411,7 +411,8 @@ yarn add ../RTNCenteredText
 cd ..
 node MyApp/node_modules/react-native/scripts/generate-codegen-artifacts.js \
   --path MyApp/ \
-  --outputPath RTNCenteredText/generated/
+  --outputPath RTNCenteredText/generated/ \
+  --targetPlatform ios
 ```
 
 This script first adds the `RTNCenteredText` module to the app with `yarn add`. Then, it invokes **Codegen** via the `generate-codegen-artifacts.js` script.
