@@ -52,7 +52,7 @@ CxxTurboModulesGuide
 
 ## 1. JavaScript Specification
 
-Create the following spec inside the `tm` folder:
+Create the following spec inside the `tm` folder (`NativeSampleModule.ts|js`):
 
 <details>
   <summary>TypeScript</summary>
