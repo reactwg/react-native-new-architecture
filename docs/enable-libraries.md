@@ -121,4 +121,4 @@ Once you have verified that your library works with the Interop Layer, update th
 
 ## Next steps
 
-Once your library is compatible with the Interop Layer, release a new version for your users. You can proceed to [converting your library to natively use TurboModules/Fabric](enable-libraries-turbomodules.md) when convenient for you.
+Once your library is compatible with the Interop Layer, release a new version for your users. You can proceed to [converting your library to natively use TurboModules/Fabric](enable-libraries-prerequisites.md) when convenient for you.
