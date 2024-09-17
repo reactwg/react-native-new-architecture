@@ -257,8 +257,8 @@ node node_modules/react-native/scripts/generate-specs-cli.js \
 ```
 
 > [!Note]
-> The output artifacts of the Codegen are inside the build folder and should not be committed.
-> They should be considered only for reference.
+> By default, the output artifacts of the Codegen are written to the build folder and should not be committed. They should be considered only for reference.
+> It is also possible to include the codegen output into your library. [Read more](./codegen.md#including-generated-code-into-libraries).
 
 ##### Example
 
