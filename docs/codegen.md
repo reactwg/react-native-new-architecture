@@ -278,7 +278,7 @@ Here is how you can enable this setup:
 - Update your `package.json` to include the generated code.
 - Update your [podspec](./turbo-modules.md#ios-create-the-podspec-file) to include the generated code.
 - Update your [build.gradle file](./turbo-modules.md#the-buildgradle-file) to include the generated code.
-- Update `cmakeListsPath` in `react-native.config.js` ([example](https://github.com/facebook/react-native/blob/3c17beafe387fb4966055d5dfcec62bef537e0f7/packages/react-native-popup-menu-android/react-native.config.js#L12)) so that the Gradle doesn't look for `CMakeLists` file in the `build` directory but instead in your `outputDir`.
+- Update `cmakeListsPath` in `react-native.config.js` ([example](https://github.com/facebook/react-native/blob/3c17beafe387fb4966055d5dfcec62bef537e0f7/packages/react-native-popup-menu-android/react-native.config.js#L12)) so that Gradle doesn't look for `CMakeLists` file in the `build` directory but instead in your `outputDir`.
 
 ---
 
