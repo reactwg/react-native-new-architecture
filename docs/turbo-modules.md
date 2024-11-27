@@ -305,7 +305,7 @@ dependencies {
 
 ##### The `ReactPackage` class
 
-Then, you need a class that extends the `TurboReactPackage` interface. To run the **Codegen** process, you don't have to completely implement the package class: an empty implementation is enough for the app to pick up the module as a proper React Native dependency and to try and generate the scaffolding code.
+Then, you need a class that extends the `BaseReactPackage` interface. To run the **Codegen** process, you don't have to completely implement the package class: an empty implementation is enough for the app to pick up the module as a proper React Native dependency and to try and generate the scaffolding code.
 
 Create an `android/src/main/java/com/rtncalculator` folder and, inside that folder, create a `CalculatorPackage.java` file.
 
@@ -319,12 +319,12 @@ import androidx.annotation.Nullable;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.module.model.ReactModuleInfoProvider;
-import com.facebook.react.TurboReactPackage;
+import com.facebook.react.BaseReactPackage;
 
 import java.util.Collections;
 import java.util.List;
 
-public class CalculatorPackage extends TurboReactPackage {
+public class CalculatorPackage extends BaseReactPackage {
 
   @Nullable
   @Override
@@ -346,12 +346,12 @@ public class CalculatorPackage extends TurboReactPackage {
 ```kotlin title="CalculatorPackage.kt"
 package com.rtncalculator;
 
-import com.facebook.react.TurboReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 
-class CalculatorPackage : TurboReactPackage() {
+class CalculatorPackage : BaseReactPackage() {
   override fun getModule(name: String?, reactContext: ReactApplicationContext): NativeModule? = null
 
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider? = null
@@ -644,14 +644,14 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 + import com.facebook.react.module.model.ReactModuleInfo;
 import com.facebook.react.module.model.ReactModuleInfoProvider;
-import com.facebook.react.TurboReactPackage;
+import com.facebook.react.BaseReactPackage;
 
 import java.util.Collections;
 import java.util.List;
 + import java.util.HashMap;
 + import java.util.Map;
 
-public class CalculatorPackage extends TurboReactPackage {
+public class CalculatorPackage extends BaseReactPackage {
 
   @Nullable
   @Override
@@ -676,7 +676,6 @@ public class CalculatorPackage extends TurboReactPackage {
 +                          CalculatorModule.NAME,
 +                          false, // canOverrideExistingModule
 +                          false, // needsEagerInit
-+                          true, // hasConstants
 +                          false, // isCxxModule
 +                          true // isTurboModule
 +          ));
@@ -694,13 +693,13 @@ public class CalculatorPackage extends TurboReactPackage {
 ```diff title="CalculatorPackage.kt"
 package com.rtncalculator;
 
-import com.facebook.react.TurboReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 +import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 
-class CalculatorPackage : TurboReactPackage() {
+class CalculatorPackage : BaseReactPackage() {
 - override fun getModule(name: String?, reactContext: ReactApplicationContext): NativeModule? = null
 + override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? =
 +   if (name == CalculatorModule.NAME) {
@@ -717,7 +716,6 @@ class CalculatorPackage : TurboReactPackage() {
 +       CalculatorModule.NAME,
 +       false, // canOverrideExistingModule
 +       false, // needsEagerInit
-+       true, // hasConstants
 +       false, // isCxxModule
 +       true // isTurboModule
 +     )
