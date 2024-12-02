@@ -953,7 +953,7 @@ If the package was previously added to your app, you will need to update it:
 
 ```sh
 cd MyApp
-yarn upgrade rtn-centered-text
+yarn add
 ```
 
 ### iOS
