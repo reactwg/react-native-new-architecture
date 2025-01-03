@@ -6,6 +6,11 @@ You can find New Architecture updates [here](https://github.com/reactwg/react-na
 
 ## Guides
 
+> [!Caution]
+> These guides are deprecated.
+> 
+> You can find the most updated versions of them in the [React Native website](https://reactnative.dev).
+
 - How to enable the New Architecture
   - For Apps
     - [Enable the New Architecture for Apps](./docs/enable-apps.md)
